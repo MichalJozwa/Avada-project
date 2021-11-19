@@ -2,13 +2,14 @@
 <html lang="pl-PL">
    <head>
       <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+      <meta name="viewport" content="width=device-width, initial-scale=1.5, user-scalable=yes">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Avada Project</title>
 
       <!-- links -->
       <link rel="stylesheet" href="css/style.css">
       <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
    </head>
    <body>
       <div id="container">
@@ -37,153 +38,167 @@
                   </div>
                </div>
                <!-- Header Buttons left/right -->
-               <div class="header-container_buttons">
-                  <div class="header-container_buttons__item button-left"><</div>
-                  <div class="header-container_buttons__item button-right">></div>
+               <div class="header-container_buttons arrow-buttons">
+                  <div class="header-container_buttons__item button-left"><span class="button-left_arrow"><</span></div>
+                  <div class="header-container_buttons__item button-right"><span class="button-right_arrow">></span></div>
                </div>
             </div>
          </header>
          <main class="main-container">
-            <section class="main-container_features">
-               <div class="main-container_features__item first-features-box">
-                  <img src="" alt="laptop">
-                  <h2>Responsive Design</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quisquam, assumenda, nesciunt voluptates ducimus earum omnis sed deserunt ad atque quidem minima. Ipsa.</p>
-                  <button class="learn-more">Learn More</button> <!-- add ">" sign in ::after in css -->
-               </div>
-               <div class="main-container_features__item second-features-box">
-                  <img src="" alt="change">
-                  <h2>Awesome Sliders</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quisquam, assumenda, nesciunt voluptates ducimus earum omnis sed deserunt ad atque quidem minima. Ipsa.</p>
-                  <button class="learn-more">Learn More</button> <!-- add ">" sign in ::after in css -->
-               </div>
-               <div class="main-container_features__item third-features-box">
-                  <img src="" alt="math">
-                  <h2>Loaded With Options</h2>
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quisquam, assumenda, nesciunt voluptates ducimus earum omnis sed deserunt ad atque quidem minima. Ipsa.</p>
-                  <button class="learn-more">Learn More</button> <!-- add ">" sign in ::after in css -->
-               </div>
-            </section>
-            <section class="main-container_recent-work">
-               <h2 class="main-container_recent-work__title">Recent work</h2>
-               <hr class="double-hr">
-               <!-- carousel section -->
-               <div class="main_container_recent-work__carousel">
-                  <!-- carousel boxes -->
-                  <div class="carousel_boxes">
-                     <div class="carousel_box">
-                        <div class="carousel_box__hover">
-                           <img src="" alt="share">
-                           <img src="" alt="search">
-                           <h4>Project title</h4>
-                           <p>Web Design, Branding</p>
+            <div class="inner">
+               <section class="main-container_features">
+                  <div class="main-container_features__item first-features-box">
+                     <div class="box-title">
+                        <img src="./img/laptop-icon.png" alt="laptop">
+                        <h2>Responsive Design</h2>
+                     </div>
+                     <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+                     <a href="#" class="learn-more">Learn More <i class="fas fa-chevron-right"></i></a> <!-- add ">" sign in ::after in css -->
+                  </div>
+                  <div class="main-container_features__item second-features-box">
+                     <div class="box-title">
+                        <img src="./img/change-icon.png" alt="change">
+                        <h2>Awesome Sliders</h2>
+                     </div>
+                     <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+                     <a href="#" class="learn-more">Learn More <i class="fas fa-chevron-right"></i></a> <!-- add ">" sign in ::after in css -->
+                  </div>
+                  <div class="main-container_features__item third-features-box">
+                     <div class="box-title">
+                        <img src="./img/options-icon.png" alt="options">
+                        <h2>Loaded With Options</h2>
+                     </div>
+                     <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets.</p>
+                     <a href="#" class="learn-more">Learn More <i class="fas fa-chevron-right"></i></a> <!-- add ">" sign in ::after in css -->
+                  </div>
+               </section>
+               <section class="main-container_recent-work">
+                  <div class="section-title-box">
+                     <h2 class="section-title-box_title">Recent work</h2>
+                     <div class="double-hr"></div>
+                  </div>
+                  <!-- carousel section -->
+                  <div class="main-container_recent-work__carousel">
+                     <!-- carousel boxes -->
+                     <div class="carousel_boxes">
+                        <div class="carousel_box">
+                           <div class="carousel_box__hover">
+                              <img src="./img/link.png" alt="share" class="hover-effect share-icon">
+                              <img src="./img/search.png" alt="search" class="hover-effect search-icon">
+                              <h4 class="hover-effect">Project title</h4>
+                              <p class="hover-effect">Web Design, Branding</p>
+                           </div>
+                        </div>
+                        <div class="carousel_box">
+                           <div class="carousel_box__hover">
+                              <img src="./img/link.png" alt="share" class="hover-effect share-icon">
+                              <img src="./img/search.png" alt="search" class="hover-effect search-icon">
+                              <h4 class="hover-effect">Project title</h4>
+                              <p class="hover-effect">Web Design, Branding</p>
+                           </div>
+                        </div>
+                        <div class="carousel_box">
+                           <div class="carousel_box__hover">
+                              <img src="./img/link.png" alt="share" class="hover-effect share-icon">
+                              <img src="./img/search.png" alt="search" class="hover-effect search-icon">
+                              <h4 class="hover-effect">Project title</h4>
+                              <p class="hover-effect">Web Design, Branding</p>
+                           </div>
+                        </div>
+                        <div class="carousel_box">
+                           <div class="carousel_box__hover">
+                              <img src="./img/link.png" alt="share" class="hover-effect share-icon">
+                              <img src="./img/search.png" alt="search" class="hover-effect search-icon">
+                              <h4 class="hover-effect">Project title</h4>
+                              <p class="hover-effect">Web Design, Branding</p>
+                           </div>
                         </div>
                      </div>
-                     <div class="carousel_box">
-                        <div class="carousel_box__hover">
-                           <img src="" alt="share">
-                           <img src="" alt="search">
-                           <h4>Project title</h4>
-                           <p>Web Design, Branding</p>
+                     <!-- carousel buttons -->
+                     <div class="carousel_buttons arrow-buttons">
+                        <div class="carousel_buttons__item button-left"><</div>
+                        <div class="carousel_buttons__item button-right">></div>
+                     </div>
+                  </div>
+               </section>
+               <section class="main-container_why-choose-us">
+                  <div class="section-title-box">
+                     <h2 class="section-title-box_title">Why Choose Us?</h2>
+                     <hr class="double-hr">
+                  </div>
+                  <div class="cards">
+                     <!-- 1st box -->
+                     <div class="extended-card">
+                        <div class="extended-card_top">
+                           <div class="extended-card_top__button"></div>
+                           <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                        </div>
+                        <div class="extended-card_bottom">
+                           <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
                         </div>
                      </div>
-                     <div class="carousel_box">
-                        <div class="carousel_box__hover">
-                           <img src="" alt="share">
-                           <img src="" alt="search">
-                           <h4>Project title</h4>
-                           <p>Web Design, Branding</p>
+                     <!-- 2nd box -->
+                     <div class="extended-card">
+                        <div class="extended-card_top">
+                           <div class="extended-card_top__button"></div>
+                           <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                        </div>
+                        <div class="extended-card_bottom">
+                           <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
                         </div>
                      </div>
-                     <div class="carousel_box">
-                        <div class="carousel_box__hover">
-                           <img src="" alt="share">
-                           <img src="" alt="search">
-                           <h4>Project title</h4>
-                           <p>Web Design, Branding</p>
+                     <!-- 3rd box -->
+                     <div class="extended-card">
+                        <div class="extended-card_top">
+                           <div class="extended-card_top__button"></div>
+                           <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                        </div>
+                        <div class="extended-card_bottom">
+                           <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
+                        </div>
+                     </div>
+                     <!-- 4th box -->
+                     <div class="extended-card">
+                        <div class="extended-card_top">
+                           <div class="extended-card_top__button"></div>
+                           <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                        </div>
+                        <div class="extended-card_bottom">
+                           <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
+                        </div>
+                     </div>
+                     <!-- 5th box -->
+                     <div class="extended-card">
+                        <div class="extended-card_top">
+                           <div class="extended-card_top__button"></div>
+                           <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                        </div>
+                        <div class="extended-card_bottom">
+                           <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
+                        </div>
+                     </div>
+                     <!-- 6th box -->
+                     <div class="extended-card">
+                        <div class="extended-card_top">
+                           <div class="extended-card_top__button"></div>
+                           <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
+                        </div>
+                        <div class="extended-card_bottom">
+                           <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
                         </div>
                      </div>
                   </div>
-                  <!-- carousel buttons -->
-                  <div class="carousel_buttons">
-                     <div class="carousel_buttons__item button-left"><</div>
-                     <div class="carousel_buttons__item button-right">></div>
+               </section>
+               <section class="main-container_whats-clients-say">
+                  <div class="section-title-box">
+                     <h2 class="section-title-box_title">What Client's Say</h2>
+                     <hr class="double-hr">
                   </div>
-               </div>
-            </section>
-            <section class="main-container_why-choose-us">
-               <h2>Why Choose Us?</h2>
-               <hr class="double-hr">
-               <div class="cards">
-                  <!-- 1st box -->
-                  <div class="extended-card">
-                     <div class="extended-card_top">
-                        <div class="extended-card_top__button"></div>
-                        <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-                     </div>
-                     <div class="extended-card_bottom">
-                        <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
-                     </div>
-                  </div>
-                  <!-- 2nd box -->
-                  <div class="extended-card">
-                     <div class="extended-card_top">
-                        <div class="extended-card_top__button"></div>
-                        <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-                     </div>
-                     <div class="extended-card_bottom">
-                        <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
-                     </div>
-                  </div>
-                  <!-- 3rd box -->
-                  <div class="extended-card">
-                     <div class="extended-card_top">
-                        <div class="extended-card_top__button"></div>
-                        <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-                     </div>
-                     <div class="extended-card_bottom">
-                        <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
-                     </div>
-                  </div>
-                  <!-- 4th box -->
-                  <div class="extended-card">
-                     <div class="extended-card_top">
-                        <div class="extended-card_top__button"></div>
-                        <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-                     </div>
-                     <div class="extended-card_bottom">
-                        <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
-                     </div>
-                  </div>
-                  <!-- 5th box -->
-                  <div class="extended-card">
-                     <div class="extended-card_top">
-                        <div class="extended-card_top__button"></div>
-                        <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-                     </div>
-                     <div class="extended-card_bottom">
-                        <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
-                     </div>
-                  </div>
-                  <!-- 6th box -->
-                  <div class="extended-card">
-                     <div class="extended-card_top">
-                        <div class="extended-card_top__button"></div>
-                        <div class="extended-card_top__title">Lorem ipsum dolor sit amet, consectetur adipisicing.</div>
-                     </div>
-                     <div class="extended-card_bottom">
-                        <div class="extended-card__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatum earum reprehenderit, nisi a voluptatem magnam in delectus impedit iste!</div>
-                     </div>
-                  </div>
-               </div>
-            </section>
-            <section class="main-container_whats-clients-say">
-               <hr class="double-hr">
-               <h2>What Client's Say</h2>
-               <blockquote>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita modi unde inventore temporibus! Magnam, nam culpa repellendus voluptate fuga necessitatibus quisquam dolore eveniet aspernatur deleniti expedita, iste explicabo? Quibusdam, quia?"</blockquote>
-               <img src="" alt="person">
-               <span><b>Jon Doe,</b>Company Inc.</span>
-            </section>
+                  <blockquote>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita modi unde inventore temporibus! Magnam, nam culpa repellendus voluptate fuga necessitatibus quisquam dolore eveniet aspernatur deleniti expedita, iste explicabo? Quibusdam, quia?"</blockquote>
+                  <img src="" alt="person">
+                  <span><b>Jon Doe,</b>Company Inc.</span>
+               </section>
+            </div>
          </main>
          <!-- footer -->
          <footer class="footer">
