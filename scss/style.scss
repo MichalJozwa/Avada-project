@@ -188,7 +188,7 @@ body{
    position: relative;
    display: block;
    width: 100%;height: 100%;
-   border: 1px solid #d2d3d4;
+   border-top: 1px solid #d2d3d4;
    box-shadow: 0px 0px 25px 5px rgba($color: #000000, $alpha: .1);
    z-index: 800;
 
@@ -259,6 +259,18 @@ body{
       }
    }
 }
+@media screen and (max-width: 1000px){
+   .main-container_features{
+      flex-direction: column;
+      gap: 3rem;
+      .main-container_features__item{
+         &:last-of-type{
+            margin-top: 0;
+         }
+      }
+   }
+}
+
 // Second section
 .main-container_recent-work{
    display: flex;
@@ -285,7 +297,7 @@ body{
       .double-hr{
          border-top: 1px solid #e7e6e6;
          border-bottom: 1px solid #e7e6e6;
-         width: 100%;height: 5px;
+         width: 100%;height: 6px;
       }
    }
    &__carousel{
@@ -400,5 +412,171 @@ body{
             .button-right_arrow{transform: translate(5%, -15%);}
          }
       }
+   }
+}
+.main-container-double{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: baseline;
+   flex-wrap: wrap;
+   gap: 1rem;
+   /* can use gap for this instead of margin (almost always use gap instead of margin with flexbox) */
+   width: 100%;height: auto;
+
+   // section title
+   .section-title-box{
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+
+      width: 100%;height: auto;
+      margin-bottom: 2rem;
+
+      &_title{
+         display: inline-block;
+         width: 17rem;
+         font-family: "Museo Slab 500", Arial, sans-serif;
+         font-size: 18px;
+         color: #343333;
+      }
+      .double-hr{
+         border: none;
+         border-top: 1px solid #e7e6e6;
+         border-bottom: 1px solid #e7e6e6;
+         width: 100%;height: 6px;
+      }
+   }
+   // sections
+   &_why-choose-us,
+   &_whats-clients-say{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-wrap: nowrap;
+      width: 100%;height: auto;
+   }
+   
+   &_why-choose-us{
+      flex: 1;
+      flex-grow: 2;
+
+      .cards{
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: flex-start;
+         flex-wrap: nowrap;
+         gap: 1rem;
+
+         width: 100%;height: auto;
+
+         .extended-card{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            
+            cursor: pointer;
+            width: auto;height: auto;
+
+            &_top{
+               display: flex;
+               flex-direction: row;
+               justify-content: flex-start;
+               align-items: center;
+               
+               width: auto;
+               height: auto;
+               
+               &__button{
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  font-size: 10px;
+                  width: 18px;
+                  height: 18px;
+                  border-radius: 100px;
+                  transform: translateX(15%);
+            
+                  background: #a0ce4e;
+                  color: #fff;
+                  z-index: 20;
+               }
+               &__title{
+                  font-family: "PT Sans", Arial, sans-serif;
+                  font-size: 14px;
+                  color: #747474;
+                  z-index: 19;
+                  margin-left: 15px
+               }
+            }
+            &_bottom{
+               display: none;
+               margin: 5px 0 0 60px;
+               width: 80%;
+               height: auto;
+               
+               .extended-card__text{
+                  display: inline-block;
+                  font-size: 15px;
+                  font-family: "PT Sans", Arial, sans-serif;
+                  color: #4e4e4e;
+                  z-index: 19;
+               }
+            }
+            &.active > .extended-card_bottom{display: inline-block;}
+            &.active > .fas{transform: rotate(90deg);}
+         }
+      }
+   }
+   &_whats-clients-say{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex: 2;
+
+      blockquote{
+         display: block;
+         width: 100%;height: auto;
+         background: #f6f3f3;
+         padding: 25px 30px;
+         margin-left: 5px;
+         
+         font-family: "PT Sans", Arial, sans-serif;
+         font-style: italic;
+         text-align: justify;
+         color: #747474;
+         font-size: 14px;
+         z-index: 601;
+
+         &::after{
+            content: '';
+            display: block;
+            width: 20px;height: 20px;
+            z-index: 600;
+            transform: translate(40%, 224%);
+            background: linear-gradient(135deg, #f6f3f3 50%, #fff 50%);
+         }
+      }
+      img{
+         transform: translate(10%, 60%) scale(1.2);
+      }
+      span{
+         font-size: 14px;
+         color: #4d4e50;
+         transform: translate(35%, 10%);
+      }
+
+   }
+}
+
+@media screen and (max-width: 1100px){
+   .main-container-double{
+      flex-direction: column;
+      gap: 0;
    }
 }
