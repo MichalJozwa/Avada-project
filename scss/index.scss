@@ -1,86 +1,4 @@
-*{
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-
-html,body{width: 100vw;min-height: 100vh;}
-body{
-   display: flex;
-   flex-direction: column;
-   justify-content: flex-start;
-   align-items: flex-start;
-   overflow-x: hidden;
-
-   font-family: "PTsans Regular", Arial, "Museo Slab 500", sans-serif;
-}
-
-// container
-#container{
-   min-width: 360px;
-   max-width: 1280px;
-   margin: 0 auto;
-   overflow: hidden;
-}
-
-.inner{
-   display: grid;
-   grid-template-columns: 1fr 68% 1fr;
-   grid-template-rows: auto;
-   width: 100%;
-   height: 100%;
-   margin: 0 auto;
-}
-
-// main
-.top-nav{
-   display: flex;
-   flex-direction: row;
-   justify-content: space-evenly;
-   align-items: center;
-
-   width: 100%;
-   background: #fff;
-   border-bottom: 1px solid rgb(221, 221, 221);
-   z-index: 900;
-
-   &_logo{width: 140px;}
-   &_links{
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
-      
-      .active > a::before{
-         content: '';
-         position: absolute;
-         display: block;
-         background: #a0ce4e;
-         width: 100%;
-         height: 3px;
-         top: 0;
-         left: 0;
-      }
-      &__item{
-         list-style: none;
-         cursor: pointer;
-         
-         a{
-            position: relative;
-            display: inline-block;
-            font-family: "Mouse Slab 500";
-            font-size: 15px;
-            text-decoration: none;
-            padding: 1.9em 0;
-            margin: 0 25px;
-            color: #555;
-            transition: color .1s ease;
-
-            &:hover{color: #a0ce4e;}
-         }
-      }
-   }
-}
+// In this file you'll find elements for index.html.
 
 .header-container{
    position: relative;
@@ -153,7 +71,7 @@ body{
          }
       }
    }
-   &_buttons{
+   .arrow-buttons{
       position: absolute;
       top: 50%;
       left: 0;
@@ -173,14 +91,16 @@ body{
          text-align: center;
          background: rgba(0, 0, 0, 0.25);
          cursor: pointer;
+         transition: background .15s ease;
          span{
             display: inline-block;
-            font-size: 40px;
+            font-size: 30px;
             font-family: "Museo Slab 500", Arial, sans-serif;
             color: #fff;
          }
-         .button-left_arrow{transform: translate(-5%, -15%);}
-         .button-right_arrow{transform: translate(5%, -15%);}
+         &:hover{background: rgba(0,0,0, 0.5);}
+         .button-left_arrow{transform: translate(-10%, 10%);}
+         .button-right_arrow{transform: translate(10%, 10%);}
       }
    }
 }
@@ -219,20 +139,6 @@ body{
          font-family: "PT Sans", Arial, sans-serif;
          font-size: 12px;
          color: #747474;
-      }
-      .learn-more{
-         display: inline-block;
-         font-family: "PT Sans", Arial, sans-serif;
-         font-size: 12px;
-         font-weight: 600;
-         text-decoration: none;
-         padding: .5em;
-         margin: 15px 0 10px 190px;
-         color: #555;
-         transition: color .1s ease;
-
-         &:hover{color: #a0ce4e}
-         .fas{font-size: 10px;margin-left: 4px;}
       }
       .box-title{
          display: flex;
@@ -281,26 +187,11 @@ body{
    flex-wrap: nowrap;
 
    .section-title-box{
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-
-      width: 100%;height: auto;
-
       &_title{
-         display: inline-block;
-         width: 155px;
-         font-family: "Museo Slab 500", Arial, sans-serif;
-         font-size: 18px;
-         color: #343333;
-      }
-      .double-hr{
-         border-top: 1px solid #e7e6e6;
-         border-bottom: 1px solid #e7e6e6;
-         width: 100%;height: 6px;
+         width: 150px;
       }
    }
+
    &__carousel{
       position: relative;
       display: flex;
@@ -403,14 +294,17 @@ body{
             background: rgba(0, 0, 0, 0.25);
             color: #fff;
             cursor: pointer;
+            transition: background .15s ease;
             
             span{
                display: inline-block;
-               font-size: 40px;
+               font-size: 20px;
                font-family: "Museo Slab 500", Arial, sans-serif;
+               color: #fff;
             }
-            .button-left_arrow{transform: translate(-5%, -15%);}
-            .button-right_arrow{transform: translate(5%, -15%);}
+            &:hover{background: rgba(0,0,0, 0.5);}
+            .button-left_arrow{transform: translate(-10%, -15%);}
+            .button-right_arrow{transform: translate(10%, -15%);}
          }
       }
    }
@@ -579,168 +473,5 @@ body{
    .main-container-double{
       flex-direction: column;
       gap: 0;
-   }
-}
-
-// Footer
-.footer{
-   display: grid;
-   grid-template-columns: 1fr 68% 1fr;
-   grid-template-rows: repeat(2, auto);
-
-   width: 100%;height: auto;
-   background: #363839;
-   border-top: 10px solid #e9eaee;
-
-   &_upper{
-      grid-column: 2/3;
-      grid-row: 1/2;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-template-rows: auto;
-      padding: 1rem 0 3.5rem;
-
-      .footer_col1,
-      .footer_col2,
-      .footer_col3,
-      .footer_col4{
-         display: flex;
-         flex-direction: column;
-         justify-content: flex-start;
-         align-items: baseline;
-         width: 100%;height: auto;
-
-         h5{
-            margin: 1.25rem 0;
-         }
-      }
-      .footer_col1{
-         img{width: 120px;margin: 0.5rem 0 1rem; transform: translateX(-10%);}
-         p{
-            font-family: "PT Sans", Arial, sans-serif;
-            font-size: 13px;
-            color: #8c8989;
-            text-shadow: 0px 0px 5px #000;
-            font-style: italic;
-            line-height: 18px;     
-         }
-      }
-      .footer_col2,
-      .footer_col3,
-      .footer_col4{
-         h5{
-            font-family: "PT Sans", Arial, sans-serif;
-            color: #ddd;
-         }
-      }
-      .footer_col2{
-         justify-content: space-around;   
-         p{
-            font-family: "PT Sans", Arial, sans-serif;
-            color: #bfbfbf;
-            font-size: 12px;
-         }
-      }
-      hr{
-         width: 95%;height: 1px;
-         background: #282a2b;
-         border: none;
-         box-shadow: 0px 1px 0px #585151;
-      }
-      .footer_col3{
-         gap: 1rem;
-         justify-content: space-between;
-         .comment{
-            font-family: "PT Sans", Arial, sans-serif;
-            font-size: 13px;
-            color: #8c8989;
-            line-height: 20px;
-            &_nick,
-            &_time{
-               color: #bfbfbf;
-            }
-         }
-         h5{
-            margin-bottom: .85rem;
-         }
-      }
-      .footer_col4{
-         h5{
-            margin-bottom: 2rem;
-         }
-         .album{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 4px;
-
-            &_photo{
-               display: block;
-               width: 50px;height: 50px;
-               background: #e6e7e8;
-            }
-         }
-      }
-      @media screen and (max-width: 1200px){
-         .footer_col4{
-            .album_photo{
-               width: 45px;height: 45px;
-            }
-         }
-      }
-   }
-
-   &_bottom{
-      grid-column: 1/4;
-      grid-row: 2/3;
-      display: grid;
-      grid-template-columns: 1fr 53% 15% 1fr;
-      grid-template-rows: 1fr;
-      
-      width: 100%;height: 60px;
-      background: #282a2b;
-      border-top: 1px solid #4b4c4d;
-
-      &__info{
-         grid-column: 2/3;
-         display: flex;
-         flex-direction: row;
-         justify-content: flex-start;
-         align-items: center;
-         gap: 10px;
-         font-family: "PT Sans", Arial,sans-serif;
-         font-size: 14px;
-         color: #bfbfbf;
-
-         span{
-            position: relative;
-            font-family: "PT Sans", Arial,sans-serif;
-            font-size: 13px;
-            color: #8c8989;
-         }
-         .HL{color: #bfbfbf;}
-      }
-      &__social{
-         grid-column: 3/4;
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-         align-items: center;
-         
-         .icon{
-            transform: translateY(10%);
-            img{
-               width: 20px;
-               &:hover{
-                  filter: brightness(1.8);
-               }
-            }
-         }
-         .icon-name{
-            position: absolute;
-            visibility: hidden;
-         }
-      }
    }
 }
