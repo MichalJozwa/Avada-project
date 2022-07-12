@@ -399,6 +399,12 @@
                   background: #a0ce4e;
                   color: #fff;
                   z-index: 20;
+
+                  .fas{
+                     transform: translate(10%, 0%);
+                     transform-origin: center;
+                     transition: transform .1s ease;
+                  }
                }
                &__title{
                   font-family: "PT Sans", Arial, sans-serif;
@@ -423,7 +429,7 @@
                }
             }
             &.active > .extended-card_bottom{display: inline-block;}
-            &.active > .fas{transform: rotate(90deg);}
+            &.active .fas{transform: rotate(90deg) translate(5%, 0%);}
          }
       }
    }
