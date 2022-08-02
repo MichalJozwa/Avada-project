@@ -1,0 +1,57 @@
+// List of pages for dropdown menu in navigation.
+// Assumptions:
+//    - Displaying elements by its "accessibility".
+//    - Displaying by its order.
+//    - JS automatically creates (or displays) element with html (styles are already done).
+//    - Inject url into html.
+
+[
+   {
+      "name": "About Us",
+      "order": 0,
+      "accessible": false,
+      "url": ""
+   },
+   {
+      "name": "Services",
+      "order": 1,
+      "accessible": false,
+      "url": ""
+   },
+   {
+      "name": "Pricing",
+      "order": 2,
+      "accessible": true,
+      "url": "/pricing.html"
+   },
+   {
+      "name": "FAQ",
+      "order": 3,
+      "accessible": false,
+      "url": ""
+   },
+   {
+      "name": "Side Navigation",
+      "order": 4,
+      "accessible": false,
+      "url": ""
+   },
+   {
+      "name": "Sidebar",
+      "order": 5,
+      "accessible": false,
+      "url": ""
+   },
+   {
+      "name": "Full Width",
+      "order": 6,
+      "accessible": false,
+      "url": ""
+   },
+   {
+      "name": "Third Level Nav",
+      "order": 7,
+      "accessible": false,
+      "url": ""
+   }
+]
