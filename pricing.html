@@ -4,11 +4,11 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.5, user-scalable=yes">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
-      <title>Pricing</title>
+      <title>Pricing | Avada Project</title>
 
       <!-- links -->
-      <link rel="stylesheet" href="css/pricing.css">
       <link rel="stylesheet" href="css/static.css">
+      <link rel="stylesheet" href="css/pricing.css">
       <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
    </head>
@@ -18,21 +18,20 @@
          <nav class="top-nav">
             <img src="./img/logo avada dark.png" class="top-nav_logo" alt="logo" tabindex="1" draggable="false">
             <ul class="top-nav_links">
-               <li class="top-nav_links__item active"><a href="./index.html" tabindex="2">Home</a></li>
+               <li class="top-nav_links__item"><a href="./index.html" tabindex="2">Home</a></li>
                <li class="top-nav_links__item"><a href="#" tabindex="3">Features</a></li>
                <li class="top-nav_links__item"><a href="#" tabindex="4">Shortcodes</a></li>
-               <li class="top-nav_links__item"><a href="#" tabindex="5">Pages</a></li>
+               <li class="top-nav_links__item active"><a href="#" tabindex="5">Pages</a></li>
                <li class="top-nav_links__item"><a href="#" tabindex="6">Portfolio</a></li>
                <li class="top-nav_links__item"><a href="#" tabindex="7">Blog</a></li>
             </ul>
          </nav>
          <!-- Header -->
          <header class="header-container">
-            <img src="./img/header-bg.png" class="header-container_bg">
-            <div class="header-container_content">
-               <div class="inner">
+            <div class="inner">
+               <div class="header-container_content">
                   <h5>Pricing</h5>
-                  <span>Home / Pages / Pricing</span>
+                  <span><a href="/index.html">Home</a> / <a href="/pages.html">Pages</a> / <a href="/pricing.html">Pricing</a></span>
                </div>
             </div>
          </header>
@@ -47,33 +46,228 @@
                   <p>Lid est laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis fugats vitaes nemo minima rerums unsers sadips amets..  Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Asunt in anim uis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eunulla</p>
                   <div class="main-container_offer__boxes">
                      <div class="offer-box">
-                        <div class="title"><span>Standard</span></div>
-                        <div class="price">
-                           <span class="price_amount">19</span>
-                           <span class="price_amount-cents">99</span> <!-- use ::before and ::after -->
-                        </div>
-                        <table border="5">
-                           <tr>
-                              <th class="title" colspan="2">
-                                 <h3><br>STANDARD</h3>
-                              </th>
-                           </tr>
-                           <tr>
-                              <td class="price">
-                                 <span class="price_amount">19</span>
-                                 <span class="price_amount-cents">99</span> <!-- use ::before and ::after -->
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>5 Projects</td>
-                           </tr>
-                           <tr>
-                              <td>5 GB Storage</td>
-                           </tr>
-                           <tr>
-                              <td>Unlimited Users</td>
-                           </tr>
+                        <!-- 1 -->
+                        <table border="1">
+                           <thead>
+                              <tr class="name">
+                                 <th>Standard</th>
+                                 <th>Premium</th>
+                                 <th class="active">Professional</th>
+                                 <th>Maximum</th>
+                                 <th>Extreme</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td class="price">
+                                    <span class="price_amount">19</span>
+                                    <span class="price_amount-cents">99</span>
+                                 </td>
+                                 <td class="price">
+                                    <span class="price_amount">29</span>
+                                    <span class="price_amount-cents">99</span>
+                                 </td>
+                                 <td class="price active">
+                                    <span class="price_amount">39</span>
+                                    <span class="price_amount-cents">99</span>
+                                 </td>
+                                 <td class="price">
+                                    <span class="price_amount">49</span>
+                                    <span class="price_amount-cents">99</span>
+                                 </td>
+                                 <td class="price">
+                                    <span class="price_amount">59</span>
+                                    <span class="price_amount-cents">99</span>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>5 Projects</td>
+                                 <td>10 Projects</td>
+                                 <td class="active">25 Projects</td>
+                                 <td>35 Projects</td>
+                                 <td>Unlimited Projects</td>
+                              </tr>
+                              <tr>
+                                 <td>800 MB Storage</td>
+                                 <td>2.5 GB Storage</td>
+                                 <td class="active">5 GB Storage</td>
+                                 <td>10 GB Storage</td>
+                                 <td>25 GB Storage</td>
+                              </tr>
+                              <tr>
+                                 <td>10 Users</td>
+                                 <td>50 Users</td>
+                                 <td class="active">125 Users</td>
+                                 <td>350 Users</td>
+                                 <td>Unlimited Users</td>
+                              </tr>
+                              <tr>
+                                 <td>2 GB Bandwidth</td>
+                                 <td>5 GB Bandwidth</td>
+                                 <td class="active">10 GB Bandwidth</td>
+                                 <td>20 GB Bandwidth</td>
+                                 <td>100 GB Bandwidth</td>
+                              </tr>
+                              <tr>
+                                 <td>Not Secured</td>
+                                 <td>Slightly Secured</td>
+                                 <td class="active">Medium Secured</td>
+                                 <td>Enhanced Security</td>
+                                 <td>Advanced Security+</td>
+                              </tr>
+                              <tr>
+                                 <td><br></td>
+                                 <td><br></td>
+                                 <td><br></td>
+                                 <td><br></td>
+                                 <td><br></td>
+                              </tr>
+                              <tr>
+                                 <td class="btn-cell">
+                                    <a><button class="box-btn sign-up-btn">
+                                       <span>Sign Up Now!</span>
+                                    </button></a>
+                                 </td>
+                                 <td class="btn-cell">
+                                    <a><button class="box-btn sign-up-btn">
+                                       <span>Sign Up Now!</span>
+                                    </button></a>
+                                 </td>
+                                 <td class="btn-cell active">
+                                    <a><button class="box-btn sign-up-btn">
+                                       <span>Sign Up Now!</span>
+                                    </button></a>
+                                 </td>
+                                 <td class="btn-cell">
+                                    <a><button class="box-btn sign-up-btn">
+                                       <span>Sign Up Now!</span>
+                                    </button></a>
+                                 </td>
+                                 <td class="btn-cell">
+                                    <a><button class="box-btn sign-up-btn">
+                                       <span>Sign Up Now!</span>
+                                    </button></a>
+                                 </td>
+                              </tr>
+                           </tbody>
                         </table>
+                        <!-- 2 -->
+                        <div class="offer-box_second">
+                           <table class="table1">
+                              <thead>
+                                 <tr class="name">
+                                    <th>Standard</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td class="price">
+                                       <span class="price_amount">19</span>
+                                       <span class="price_amount-cents">99</span>
+                                       <span class="price_amount-slash">/</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td>5 Projects</td>
+                                 </tr>
+                                 <tr>
+                                    <td>800 MB Storage</td>
+                                 </tr>
+                                 <tr>
+                                    <td>10 Users</td>
+                                 </tr>
+                                 <tr>
+                                    <td>2 GB Bandwidth</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Not Secured</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="btn-cell">
+                                       <a><button class="box-btn sign-up-btn">
+                                          <span>Sign Up Now!</span>
+                                       </button></a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <table class="table2">
+                              <thead>
+                                 <tr class="name">
+                                    <th>Premium</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td class="price">
+                                       <span class="price_amount">29</span>
+                                       <span class="price_amount-cents">99</span>
+                                       <span class="price_amount-slash">/</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td>10 Projects</td>
+                                 </tr>
+                                 <tr>
+                                    <td>2.5 GB Storage</td>
+                                 </tr>
+                                 <tr>
+                                    <td>50 Users</td>
+                                 </tr>
+                                 <tr>
+                                    <td>5 GB Bandwidth</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Slightly Secured</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="btn-cell">
+                                       <a><button class="box-btn sign-up-btn">
+                                          <span>Sign Up Now!</span>
+                                       </button></a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <table class="table3">
+                              <thead>
+                                 <tr class="name">
+                                    <th>Professional</th>
+                                 </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                    <td class="price">
+                                       <span class="price_amount">39</span>
+                                       <span class="price_amount-cents">99</span>
+                                       <span class="price_amount-slash">/</span>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td>25 Projects</td>
+                                 </tr>
+                                 <tr>
+                                    <td>5 GB Storage</td>
+                                 </tr>
+                                 <tr>
+                                    <td>125 Users</td>
+                                 </tr>
+                                 <tr>
+                                    <td>10 GB Bandwidth</td>
+                                 </tr>
+                                 <tr>
+                                    <td>Medium Secured</td>
+                                 </tr>
+                                 <tr>
+                                    <td class="btn-cell">
+                                       <a><button class="box-btn sign-up-btn">
+                                          <span>Sign Up Now!</span>
+                                       </button></a>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                        </div>
                      </div>
                   </div>
                </section>

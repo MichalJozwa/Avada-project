@@ -68,6 +68,9 @@
                color: #648b16;
                font-weight: 600;
             }
+            &:hover{
+               background: linear-gradient(0deg, #b1d96b 0%, #d0eb8e 100%);
+            }
          }
       }
    }

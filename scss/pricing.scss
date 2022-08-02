@@ -1,0 +1,241 @@
+// In this file you'll find elements for pricing.html.
+
+table{
+   min-width: 800px;
+   box-shadow: 0px 0px 0px 8px rgba($color: #000000, $alpha: .03);
+   border: 1px rgba($color: #000000, $alpha: .1);
+   border-spacing: 0;
+   text-align: center;
+   vertical-align: middle;
+
+   td{
+      padding: 7px;
+      font-family: "PT Sans";
+      font-weight: normal;
+      font-size: 15px;
+      color: #747474;
+   }
+
+   th,td{background: #fff;}
+
+   .name{
+      font-family: "Museo Slab 500", Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      letter-spacing: .5px;
+      font-weight: 400;
+
+      th{padding: 15px;}
+      .active{color: #a0ce4e;}
+   }
+   
+   .price{
+      font-family: "Museo Slab 500";
+      background: #f8f8f8;
+      padding: 7px 0;
+      
+      &_amount{
+         position: relative;
+         font-size: 55px;
+         color: #a0ce4e;
+         
+         &-cents{
+            display: inline-block;
+            color: #a0ce4e;
+            vertical-align: top;
+            transform: translateY(50%);
+         }
+         
+         &::before{
+            content: "$";
+            display: inline-block;
+            color: #505050;
+            font-size: 21px;
+            vertical-align: top;
+            transform: translateY(50%);
+         }
+         &::after{
+            content: "monthly";
+            position: absolute;
+            bottom: 1.4rem;right: -2.7rem;
+            display: inline-block;
+            font-family: "PT Sans";
+            font-weight: 600;
+            font-style: italic;
+            font-size: 11px;
+            color: #505050;
+         }
+      }  
+   }
+
+   .btn-cell{
+      padding: 10px 5px;
+      background: #f7f7f7;
+
+      .box-btn{
+         display: inline-block;
+         width: 119px;
+         height: 30px;
+         text-align: center;
+         border-radius: 2px;
+         border: 1px solid rgba($color: #aec573, $alpha: 1.0);
+         background: linear-gradient(0deg, #9ec954 0%, #d0eb8e 100%);
+         box-shadow: 0px 1px 3px 1px rgba($color: #000000, $alpha: .1);
+         transition: transform .05s ease;
+         cursor: pointer;
+         span{
+            display: inline-block;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: "PT SANS", Arial, sans-serif;
+            color: #648b16;
+            font-weight: 600;
+         }
+         &:hover{transform: scale(1.1);}
+      }
+   }
+}
+
+.main-container{
+   box-shadow: 0px 5px 30px 0px rgba($color: #000000, $alpha: .1);
+   color: #333333;
+   
+   .inner section {grid-column: 2/3;margin-bottom: 3.3rem;}
+
+   &_offer{
+      margin-top: 3rem;
+
+      p{
+         font-family: "PT Sans";
+         font-size: 14px;
+         font-weight: 400;
+         color: #747474;
+         margin: 1rem 0 4rem;
+         text-align: justify;
+      }
+      
+      .section-title-box{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         align-items: center;
+
+         &_title{
+            display: inline-block;
+            font-family: "Museo Slab 500", Arial, sans-serif;
+            font-size: 18px;
+            color: #343333;
+         }
+         .double-hr{
+            display: inline;
+            border-top: 1px solid #e7e6e6;
+            border-bottom: 1px solid #e7e6e6;
+            width: 60%;height: 6px;
+         }
+      }
+   }  
+   &_offer__boxes{
+
+      .offer-box{
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+         flex-wrap: nowrap;
+         gap: 6rem;
+      }
+      .offer-box_second{
+         display: flex;
+         flex-direction: row;
+         justify-content: space-around;
+         align-content: center;
+         align-items: center;
+         flex-wrap: wrap;
+         gap: 2rem;
+
+         table{
+            min-width: 250px;
+            
+            tr,td{
+               border: 1px solid rgba($color: #000000, $alpha: .1);
+               border-spacing: 0;
+            }
+            .name{
+               th{
+                  background: #9ecc70;
+                  font-size: 17px;
+                  font-weight: 400;
+                  padding: 10px;
+               }
+            }
+            .price{
+               &_amount::after{
+                  content: 'mo.';
+                  bottom: .4rem;right: -4.5rem;
+                  font-size: 26px;
+                  font-weight: 400;
+                  
+               }
+               &_amount-slash{
+                  font-family: "PT Sans-serif";
+                  font-weight: 400;
+                  font-size: 57px;
+                  font-style: italic;
+                  color: #505050;
+                  display: inline-block;
+                  transform: translateX(-60%);
+               }
+            }
+
+            .btn-cell{
+               padding: 12px;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 150px){
+   .main-container{
+      &_offer{
+         p{margin-bottom: 0;}
+         
+         &__boxes{
+            transform: scale(0.7);
+            
+            .offer-box{gap: 4rem;}
+      
+            .offer-box_second{
+               flex-direction: column;
+               gap: 3rem;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 450px){
+   .main-container{
+      &_offer{
+         &__boxes{
+            transform: scale(0.9);
+            
+            .offer-box_second{
+               flex-direction: row;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (min-width: 1024px){
+   .main-container{
+      &_offer{
+         p{margin-bottom: 4rem;}
+         
+         &__boxes{
+            transform: scale(1.0);
+            .offer-box{gap: 6rem;}
+         }
+      }
+   }
+}
