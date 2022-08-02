@@ -21,7 +21,16 @@
                <li class="top-nav_links__item active"><a href="./index.html" tabindex="2">Home</a></li>
                <li class="top-nav_links__item"><a href="#" tabindex="3">Features</a></li>
                <li class="top-nav_links__item"><a href="#" tabindex="4">Shortcodes</a></li>
-               <li class="top-nav_links__item"><a href="#" tabindex="5">Pages</a></li>
+               <li class="top-nav_links__item dropdown-parent">
+                  <a href="#" tabindex="5">Pages</a>
+                  <!-- Elements added by JS and JSON -->
+                  <!-- This below is the pattern -->
+                  <div class="dropdown pages-dd">
+                     <ul class="dropdown_list">
+                        <li class="dropdown_list__item"><a href="#">foo</a></li>
+                     </ul>
+                  </div>
+               </li>
                <li class="top-nav_links__item"><a href="#" tabindex="6">Portfolio</a></li>
                <li class="top-nav_links__item"><a href="#" tabindex="7">Blog</a></li>
             </ul>
