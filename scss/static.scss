@@ -4,6 +4,7 @@
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   // background: #0064001a !important;
 }
 
 html,body{width: 100vw;min-height: 100vh;}
@@ -19,6 +20,11 @@ body{
 
 // Text
 p{font-family: "PT Sans", Arial, sans-serif;}
+
+// Highlight
+.highlight{
+   color: #a0ce4e;
+}
 
 // Container
 #container{
@@ -75,7 +81,6 @@ p{font-family: "PT Sans", Arial, sans-serif;}
          a{
             position: relative;
             display: inline-block;
-            max-width: 50px;
             font-family: "Mouse Slab 500";
             font-size: 15px;
             text-decoration: none;
@@ -117,9 +122,9 @@ p{font-family: "PT Sans", Arial, sans-serif;}
       width: 100%;height: 100%;
 
       &__item{
-         display: inline-flex;
+         display: flex;
          width: 100%;height: 28px;
-         text-align: center;
+         text-align: justify;
          border-bottom: solid 1px #dcd9d9;
          transition: background .1s ease;
 
@@ -127,7 +132,8 @@ p{font-family: "PT Sans", Arial, sans-serif;}
          
          a{
             margin: auto 0;
-            padding: 1px calc(#{$dropdown-width} - 25px) 1px 15px;
+            // padding: 1px calc(#{$dropdown-width} - 160px) 1px 15px;
+            padding: 1px 50px 1px 15px;
             text-decoration: none;
             vertical-align: middle;
             font-family: "PT Sans";
@@ -150,6 +156,7 @@ p{font-family: "PT Sans", Arial, sans-serif;}
    }
 }
 
+// header
 .header-container{
    width: 100%;
    height: 90px;

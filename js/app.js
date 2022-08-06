@@ -2,32 +2,49 @@ import DMList from './pages-dropdown-list.json' assert {type: 'json'};
 
 // https://www.tutorialstonight.com/javascript-loop-through-an-array-of-objects
 
+// loop through the JSON
 // for(let i = 0; i<DMList.length; i++){
 //    if(element.accessible == true){
 //       console.log(DMList[i]);
 //    }
 // }
 
+// check if a number is odd
+// function isOdd(num) {return num % 2 === 1}
+// console.log(!isOdd(2))
+
+// function showing odd order objects
+// const odds = DMList.filter(
+//    (number) => number & 2 === 1
+// );
+
+// let array = DMList.forEach(element => {
+//    if(isOdd(element[1].order))
+//       return true
+//    return false
+// })
+
+// console.log(array);
+
 // checks what pages are accessible
-const isAccessible = DMList.find(element => {
-   if(element.accessible == true){
-      return true
-      // const text = "↓ Element with accessibility ✔";
-      // const array = [element.order, element.accessible, element.name, element.url];
-      // console.log(text)
-      // console.log(array)
-   } /* else {
-      setTimeout(() => {
-         // console.log("↓ Element with no accessibility ❌")
-         console.log(element.order, element.accessible, element.name, element.url)
-      }, 100);
-   } */
-   return false
-});
+// const isAccessible = DMList.find(element => {
+//    if(element.accessible == true){
+//       return true
+//       // const text = "↓ Element with accessibility ✔";
+//       // const array = [element.order, element.accessible, element.name, element.url];
+//       // console.log(text)
+//       // console.log(array)
+//    } /* else {
+//       setTimeout(() => {
+//          // console.log("↓ Element with no accessibility ❌")
+//          console.log(element.order, element.accessible, element.name, element.url)
+//       }, 100);
+//    } */
+//    return false
+// });
 
-// function returning properties
-
-const test = { accessible: true };
+// function returning objects with a specific properties
+const test = { accessible: true};
 
 function getExact(DMList, test){
    return DMList.filter(obj => {
@@ -49,22 +66,39 @@ console.log(getExact(DMList, test));
 
 // Function adding elements into menu.
 function addElement(){
-   if(isAccessible){
-      console.log(isAccessible);
+   getExact(DMList, test).forEach((element => {
+      const ul = document.querySelector(".dropdown_list");
+      const li = document.createElement("li");
+      const link = document.createElement("a");
+
+      li.classList.add("dropdown_list__item");
+      link.href = element.url;
+      // link.href = getExact(DMList, test)[1].url;
+      link.innerText = element.name;
+      // link.innerText = getExact(DMList, test)[1].name;
+
+      li.append(link);
+      ul.append(li);
+   }))
+
+   /* if(isAccessible){
+      // console.log(getExact(DMList, test));
 
       const ul = document.querySelector(".dropdown_list");
       const li = document.createElement("li");
       const link = document.createElement("a");
 
       li.classList.add("dropdown_list__item");
-      link.href = getExact(DMList, test)[1].url;
+      link.href = url;
+      // link.href = getExact(DMList, test)[1].url;
       // link.href = this.url;
+      link.innerText = name;
       // link.innerText = this.name;
-      link.innerText = getExact(DMList, test)[1].name;
+      // link.innerText = getExact(DMList, test)[1].name;
 
       li.append(link);
       ul.append(li);
-   }
+   } */
 
    /* const htmlStructure = () => {
       const newDiv = document.createElement("li");
@@ -82,52 +116,51 @@ function addElement(){
 
 addElement();
 
-
 // Function injecting url into html
-const link = document.querySelector('dropdown_list__item a');
+// const link = document.querySelector('dropdown_list__item a');
 
-function changeUrl(){
-   DMList.some(element => {
-      console.log(element.url);
-   })
-}
+// function changeUrl({url}){
+//    DMList.some(element => {
+//       console.log(element.url);
+//    })
+// }
 
-// link.forEach((item) => {
-//    // item.href = changeUrl;
-// });
+// // link.forEach((item) => {
+// //    // item.href = changeUrl;
+// // });
 
-// all my other tries..
-const listAmount = Object.keys(DMList).length;
+// // all my other tries..
+// const listAmount = Object.keys(DMList).length;
 
-function getRightPage() {
-   for(let i=0;i<listAmount;i++){
-      DMList.find(el => el.accessible == true);
-   }
-}
+// function getRightPage() {
+//    for(let i=0;i<listAmount;i++){
+//       DMList.find(el => el.accessible == true);
+//    }
+// }
 
-function showAccessiblePages(){
-   if(Object.values(DMList).includes("accessible")){
-      console.log('true');
-   }
-   console.log(DMList.some(el => el.accessible == true));
-   // console.log('nah :(');
-}
+// function showAccessiblePages(){
+//    if(Object.values(DMList).includes("accessible")){
+//       console.log('true');
+//    }
+//    console.log(DMList.some(el => el.accessible == true));
+//    // console.log('nah :(');
+// }
 
 // showAccessiblePages();
 // getRightPage();
 
 // Find what object has a value.
 
-function getPages(){
-   let foo = DMList.toString();
+// function getPages(){
+//    let foo = DMList.toString();
    
-   for(let i=0;i<listAmount; i++){
+//    for(let i=0;i<listAmount; i++){
 
-      console.log(foo);
+//       console.log(foo);
 
-      console.log(getRightPage["name"]);
-   }
-}
+//       console.log(getRightPage["name"]);
+//    }
+// }
 
 // getPages();
 

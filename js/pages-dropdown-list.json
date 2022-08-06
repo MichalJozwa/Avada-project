@@ -3,7 +3,7 @@
       "name": "About Us",
       "order": 0,
       "accessible": true,
-      "url": ""
+      "url": "/about.html"
    },
    {
       "name": "Services",
@@ -44,7 +44,7 @@
    {
       "name": "Third Level Nav",
       "order": 7,
-      "accessible": true,
+      "accessible": false,
       "url": ""
    }
 ]
