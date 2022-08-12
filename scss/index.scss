@@ -84,6 +84,7 @@
       align-items: center;
       width: 100%;
       transform: translateY(-80%);
+      z-index: 800;
 
       .button-left,
       .button-right{
@@ -163,7 +164,7 @@
 
 @media screen and (max-width: 1200px){
    .main-container_features__item{
-      transform: scale(1.2);
+      transform: scale(1.15);
       &:last-of-type{
          margin-top: 50px;
       }
@@ -393,7 +394,6 @@
                   display: flex;
                   justify-content: center;
                   align-items: center;
-                  font-size: 10px;
                   width: 18px;
                   height: 18px;
                   border-radius: 100px;
@@ -404,6 +404,7 @@
                   z-index: 20;
 
                   .fas{
+                     font-size: 10px;
                      transform: translate(10%, 0%);
                      transform-origin: center;
                      transition: transform .1s ease;

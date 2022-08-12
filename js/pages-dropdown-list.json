@@ -2,7 +2,7 @@
    {
       "name": "About Us",
       "order": 0,
-      "accessible": true,
+      "accessible": false,
       "url": "/about.html"
    },
    {

@@ -11,12 +11,16 @@
       <link rel="stylesheet" href="/css/index.css">
       <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+      <link rel="stylesheet" href="./css/swiper-bundle.css"/>
+      <!-- scripts -->
+      <script type="module" src="js/app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
    </head>
    <body>
       <div id="container">
          <!-- Navigation -->
          <nav class="top-nav">
-            <img src="./img/logo avada dark.png" class="top-nav_logo" alt="logo" tabindex="1" draggable="false">
+            <a href="/index.html"><img src="./img/logo avada dark.png" class="top-nav_logo" alt="logo" tabindex="1" draggable="false"></a>
             <ul class="top-nav_links">
                <li class="top-nav_links__item active"><a href="./index.html" tabindex="2">Home</a></li>
                <li class="top-nav_links__item"><a href="#" tabindex="3">Features</a></li>
@@ -35,22 +39,39 @@
          </nav>
          <!-- Header -->
          <header class="header-container">
-            <div class="header-container_content">
-               <div class="inner">
-                  <div class="header-container_content__box header-box-first">
-                     <h1>Powerfully Responsive, <br> With A Clean Design</h1>
-                     <span>Multi-Purpose Business Wordpress Theme</span>
-                     <p>Lid est laborum dolo rumes fugats untras. Et harums ser quidem rerum facilis <br> dolores nemis omnis fugiats vitaes nemo minima rerums unsers sadips amets.</p>
-                     <button class="box-btn purchase_btn" tabindex="8">
-                        <img src="./img/purchase-btn-checkmark.png">
-                        <span>PURCHASE NOW</span>
-                     </button>
+            <div class="header-container_content swiper headerSwiper">
+               <!-- Swiper wrapper -->
+               <div class="swiper-wrapper">
+                  <!-- Swiper slides -->
+                  <div class="inner swiper-slide">
+                     <div class="header-container_content__box header-box-first">
+                        <h1>Powerfully Responsive, <br> With A Clean Design</h1>
+                        <span>Multi-Purpose Business Wordpress Theme</span>
+                        <p>Lid est laborum dolo rumes fugats untras. Et harums ser quidem rerum facilis <br> dolores nemis omnis fugiats vitaes nemo minima rerums unsers sadips amets.</p>
+                        <button class="box-btn purchase_btn" tabindex="8">
+                           <img src="./img/purchase-btn-checkmark.png">
+                           <span>PURCHASE NOW</span>
+                        </button>
+                     </div>
+                  </div>
+                  <div class="inner swiper-slide">
+                     <div class="header-container_content__box header-box-first">
+                        <h1>Powerfully Responsive, <br> With A Clean Design</h1>
+                        <span>Multi-Purpose Business Wordpress Theme</span>
+                        <p>Lid est laborum dolo rumes fugats untras. Et harums ser quidem rerum facilis <br> dolores nemis omnis fugiats vitaes nemo minima rerums unsers sadips amets.</p>
+                        <button class="box-btn purchase_btn" tabindex="8">
+                           <img src="./img/purchase-btn-checkmark.png">
+                           <span>PURCHASE NOW</span>
+                        </button>
+                     </div>
                   </div>
                </div>
+               <!-- Swiper Pagination -->
+               <div class="header-pagination swiper-pagination"></div>
                <!-- Header Buttons left/right -->
                <div class="header-container_buttons arrow-buttons">
-                  <div class="header-container_buttons__item button-left" tabindex="9"><span class="button-left_arrow"><i class="fas fa-chevron-left"></i></span></div>
-                  <div class="header-container_buttons__item button-right" tabindex="10"><span class="button-right_arrow"><i class="fas fa-chevron-right"></i></span></div>
+                  <div class="header-container_buttons__item button-left header_btn--left" tabindex="9"><span class="button-left_arrow"><i class="fas fa-chevron-left"></i></span></div>
+                  <div class="header-container_buttons__item button-right header_btn--right" tabindex="10"><span class="button-right_arrow"><i class="fas fa-chevron-right"></i></span></div>
                </div>
             </div>
          </header>
@@ -89,10 +110,10 @@
                      <div class="double-hr"></div>
                   </div>
                   <!-- carousel section -->
-                  <div class="main-container_recent-work__carousel">
+                  <div class="main-container_recent-work__carousel swiper">
                      <!-- carousel boxes -->
-                     <div class="carousel_boxes">
-                        <div class="carousel_box">
+                     <div class="carousel_boxes swiper-wrapper">
+                        <div class="carousel_box swiper-slide">
                            <div class="carousel_box__hover">
                               <img src="./img/link.png" alt="share" class="hover-effect share-icon" tabindex="17">
                               <img src="./img/search.png" alt="search" class="hover-effect search-icon" tabindex="16">
@@ -100,7 +121,7 @@
                               <p class="hover-effect">Web Design, Branding</p>
                            </div>
                         </div>
-                        <div class="carousel_box">
+                        <div class="carousel_box swiper-slide">
                            <div class="carousel_box__hover">
                               <img src="./img/link.png" alt="share" class="hover-effect share-icon" tabindex="19">
                               <img src="./img/search.png" alt="search" class="hover-effect search-icon" tabindex="18">
@@ -108,7 +129,23 @@
                               <p class="hover-effect">Web Design, Branding</p>
                            </div>
                         </div>
-                        <div class="carousel_box">
+                        <div class="carousel_box swiper-slide">
+                           <div class="carousel_box__hover">
+                              <img src="./img/link.png" alt="share" class="hover-effect share-icon" tabindex="19">
+                              <img src="./img/search.png" alt="search" class="hover-effect search-icon" tabindex="18">
+                              <h4 class="hover-effect">Project title</h4>
+                              <p class="hover-effect">Web Design, Branding</p>
+                           </div>
+                        </div>
+                        <div class="carousel_box swiper-slide">
+                           <div class="carousel_box__hover">
+                              <img src="./img/link.png" alt="share" class="hover-effect share-icon" tabindex="19">
+                              <img src="./img/search.png" alt="search" class="hover-effect search-icon" tabindex="18">
+                              <h4 class="hover-effect">Project title</h4>
+                              <p class="hover-effect">Web Design, Branding</p>
+                           </div>
+                        </div>
+                        <div class="carousel_box swiper-slide">
                            <div class="carousel_box__hover">
                               <img src="./img/link.png" alt="share" class="hover-effect share-icon" tabindex="21">
                               <img src="./img/search.png" alt="search" class="hover-effect search-icon" tabindex="20">
@@ -116,7 +153,7 @@
                               <p class="hover-effect">Web Design, Branding</p>
                            </div>
                         </div>
-                        <div class="carousel_box">
+                        <div class="carousel_box swiper-slide">
                            <div class="carousel_box__hover">
                               <img src="./img/link.png" alt="share" class="hover-effect share-icon" tabindex="23">
                               <img src="./img/search.png" alt="search" class="hover-effect search-icon" tabindex="22">
@@ -127,8 +164,8 @@
                      </div>
                      <!-- carousel buttons -->
                      <div class="carousel_buttons arrow-buttons">
-                        <div class="carousel_buttons__item button-left" tabindex="14"><span class="button-left_arrow"><i class="fas fa-chevron-left"></i></span></div>
-                        <div class="carousel_buttons__item button-right" tabindex="15"><span class="button-right_arrow"><i class="fas fa-chevron-right"></i></span></div>
+                        <div class="carousel_buttons__item button-left recent-work_btn--left" tabindex="14"><span class="button-left_arrow"><i class="fas fa-chevron-left"></i></span></div>
+                        <div class="carousel_buttons__item button-right recent-work_btn--right" tabindex="15"><span class="button-right_arrow"><i class="fas fa-chevron-right"></i></span></div>
                      </div>
                   </div>
                </section>
@@ -301,7 +338,5 @@
             </div>
          </footer>
       </div>
-      
-      <script type="module" src="js/app.js"></script>
    </body>
 </html>

@@ -2,6 +2,70 @@ import DMList from './pages-dropdown-list.json' assert {type: 'json'};
 
 // https://www.tutorialstonight.com/javascript-loop-through-an-array-of-objects
 
+// Initialize Slider/Swiper
+var headerSwiper = new Swiper(".headerSwiper", {
+   loop: true,
+   keyboard: true,
+   mousewheel: false,
+   speed: 800,
+   autoplay: {
+      delay: 6000,
+   },
+   pagination: {
+      el: ".header-pagination",
+      dynamicBullets: true,
+      clickable: true,
+   },
+   navigation: {
+      prevEl: '.header_btn--left',
+      nextEl: '.header_btn--right',
+    },
+});
+
+var mainSwiper = new Swiper(".main-container_recent-work__carousel", {
+   centeredSlides: false,
+   slidesPerView: "auto",
+   spaceBetween: 30,
+   loop: true,
+   keyboard: true,
+   mousewheel: false,
+   speed: 600,
+   grabCursor: true,
+   autoplay: {
+      delay: 7000,
+   },
+   navigation: {
+      prevEl: '.recent-work_btn--left',
+      nextEl: '.recent-work_btn--right',
+   },
+   breakpoints: {
+      '@0.00': {
+         slidesPerView: 1,
+         spaceBetween: "auto",
+      },
+      '@0.50': {
+         slidesPerView: 2,
+         spaceBetween: 10,
+         centeredSlides: false,
+         autoplay: {
+            delay: 2000,
+         },
+      },
+      '@0.75': {
+        slidesPerView: 2,
+        spaceBetween: 25,
+      },
+      "@1.00": {
+        slidesPerView: 3,
+        spaceBetween: 15,
+      },
+      "@1.50": {
+        slidesPerView: 4,
+        spaceBetween: 20,
+      },
+    },
+});
+
 // loop through the JSON
 // for(let i = 0; i<DMList.length; i++){
 //    if(element.accessible == true){
@@ -73,14 +137,14 @@ function addElement(){
 
       li.classList.add("dropdown_list__item");
       link.href = element.url;
-      // link.href = getExact(DMList, test)[1].url;
       link.innerText = element.name;
-      // link.innerText = getExact(DMList, test)[1].name;
 
       li.append(link);
       ul.append(li);
    }))
+}
 
+addElement();
    /* if(isAccessible){
       // console.log(getExact(DMList, test));
 
@@ -112,9 +176,6 @@ function addElement(){
       document.querySelector('dropdown_list') += newDiv;
       // document.body.insertBefore(newDiv, currentDiv);
    } */
-}
-
-addElement();
 
 // Function injecting url into html
 // const link = document.querySelector('dropdown_list__item a');
@@ -125,9 +186,9 @@ addElement();
 //    })
 // }
 
-// // link.forEach((item) => {
-// //    // item.href = changeUrl;
-// // });
+// link.forEach((item) => {
+//    // item.href = changeUrl;
+// });
 
 // // all my other tries..
 // const listAmount = Object.keys(DMList).length;
